@@ -143,6 +143,11 @@ func TestIterate(t *testing.T) {
 		assert.True(t, set.Has(elem))
 		return false
 	})
+
+	set.Iterate(func(elem string) bool {
+		return true
+	})
+
 }
 
 func TestIterateAll(t *testing.T) {
